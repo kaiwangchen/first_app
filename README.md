@@ -36,3 +36,14 @@ http://ruby.railstutorial.org/chapters/beginning
     git merge modify-README
     git branch -d modify-README
     git push
+
+
+    subl Gemfile
+    bundle install --without production
+    git commit -a -m "Update Gemfile.lock for Heroku"
+
+    rake assets:precompile
+    git add .
+    git commit -m "Add precompiled assets for Heroku"
+
+    ...
